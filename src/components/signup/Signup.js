@@ -2,24 +2,20 @@ import {useState} from 'react';
 import {signupFetch, testFetch} from "../../utils/fetch";
 import "./Signup.css";
 
-const Signup = (signupFetch,testFetch) => {
+const Signup = () => {
       const [username, setUsername] = useState ("");
       const [password, setPassword] = useState("");
       const [email, setEmail]= useState("");
 
-     const changeHandler = (e, setter, state) => {
+     const changeHandler = (e, setter) => {
      setter(e.target.value);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("hello from handlesubmit");
-    try {
-       const data = await signupFetch(username, email, password);
-       
-    } catch (error) {
-      
-    }
+    await signupFetch(username, email, password);
+    console.log("byebye from handlesumbit")
  };
 
   return (

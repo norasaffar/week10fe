@@ -1,15 +1,16 @@
 import { useState} from "react";
 import LogOrSign from './components/logOrSign/LogOrSign';
+import Login from "./components/login/Login";
 
 function App() {
-  const [setLoggedIn] = useState(false);
+  const [loggedIn , setLoggedIn ] = useState(false);
 
   return (  
     <div>
-      <LogOrSign setLoggedIn={setLoggedIn} />
+      <LogOrSign setLoggedIn={setLoggedIn} loggedIn={loggedIn} />
     </div>
     )
-    
+  
   }
 
 export default App;
