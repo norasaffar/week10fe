@@ -7,16 +7,17 @@ export const testFetch = async () => {
 };
 
 export const signupFetch = async (username, email, password) => {
+  console.log("hello from signup")
     const response = await fetch("http://localhost:5001/users",{
-       method:"POST",
-       mode: "cors",
-       headers:{
-        "Content-Type": "application/json",
+         method:"POST",
+         mode: "cors",
+         headers:{
+         "Content-Type": "application/json",
        },
-        body: JSON.stringify({
-        username: username,
-        email: email,
-        password: password,
+         body: JSON.stringify({
+          username: username,
+          email: email,
+          password: password,
        }),
     });
 
@@ -25,7 +26,7 @@ export const signupFetch = async (username, email, password) => {
 };
 
 export const loginFetch = async (username, password) => {
-  console.log("hello login fetch")
+  console.log("hello login fetch", username , password)
     const response = await fetch("http://localhost:5001/users/login",{
       method: "POST",
       mode: "cors",
@@ -42,3 +43,4 @@ export const loginFetch = async (username, password) => {
     return data;
   
   };
+
