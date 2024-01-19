@@ -1,0 +1,23 @@
+/* .pic-card{
+    width: auto;
+    border: 2px solid #da5a5a;
+    border-radius: 8px;
+    text-align: center;
+    /* padding: 2px; */
+
+/* } */ 
+
+.pic-card {
+    width: 48%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+  
+.pic-card img {
+    width: 36%;
+    height: auto;
+    border: 2px solid #da5a5a;
+    border-radius: 8px;
+     
+  }
+
